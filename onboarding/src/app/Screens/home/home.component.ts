@@ -8,21 +8,25 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-    data: any;  
-    constructor(private router: Router,
+    data: any;
+    // teams:any[]=[];  
+    managers: any[] = [];
+    constructor(
+      private router: Router,
       private dataService: DataService) {}
-
+    
 
     ngOnInit(): void {
       this.dataService.getData().subscribe((data) => {
         this.data = data;
-        console.log("test")
-        console.log(this.data)
+        // this.teams = data.teams.name;
+        // console.log(this.teams)
+        this.managers = data.managers
       });
-      console.log(this.data)
     }
 
-  viewTeam(){
+  viewTeam(team:any){
+console.log(team)
     this.router.navigate(['roles'])
   }
   logout(){

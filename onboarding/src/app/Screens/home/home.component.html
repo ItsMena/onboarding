@@ -144,8 +144,8 @@
   <!-- <div class="team-card" (click)="viewTeam()">Team Big Bucks</div>
   <div class="team-card" (click)="viewTeam()">Team Fiserv</div>
   <div class="team-card" (click)="viewTeam()">Team Optimus Prime</div> -->
-  <!-- <div class="team-card" *ngFor="let team of teams" (click)="viewTeam(team)">{{ team }}</div>
-  <button class="add-role-button" onclick="openModal()">Add New Role</button> -->
+  <div class="team-card" *ngFor="let team of managers[0]?.teams" (click)="viewTeam(team)">{{ team.name }}</div>
+  <button class="add-role-button" onclick="openModal()">Add New Team</button>
 </div>
 
 <div id="myModal" class="modal">
