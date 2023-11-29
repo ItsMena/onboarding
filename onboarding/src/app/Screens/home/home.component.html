@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-name {
+      margin-right: 10px;
+    }
+
+    .logout-dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .logout-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .logout-dropdown-content button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .logout-dropdown:hover .logout-dropdown-content {
+      display: block;
+    }
+
+    .teams-container {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .team-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .team-card:hover {
+      transform: scale(1.05);
+    }
+
+    .team-button {
+      padding: 20px;
+      font-size: 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .add-role-button {
+      padding: 30px;
+      font-size: 28px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="user-profile">
+    <div class="user-name">John Doe</div>
+    <div class="logout-dropdown">
+      <span>▼</span>
+      <div class="logout-dropdown-content">
+        <button (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="teams-container">
+  <!-- <div class="team-card" (click)="viewTeam()">Team Big Bucks</div>
+  <div class="team-card" (click)="viewTeam()">Team Fiserv</div>
+  <div class="team-card" (click)="viewTeam()">Team Optimus Prime</div> -->
+  <!-- <div class="team-card" *ngFor="let team of teams" (click)="viewTeam(team)">{{ team }}</div>
+  <button class="add-role-button" onclick="openModal()">Add New Role</button> -->
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">×</span>
+    <h2>Add New Role</h2>
+    <!-- Add your form or content for adding a new role -->
+  </div>
+</div>
+
+<script>
+  function logout() {
+    // Add logic for logout
+    console.log('Logout clicked!');
+  }
+
+  function viewTeam(teamName) {
+    // Add logic to view information for the selected team
+    console.log(`Viewing information for ${teamName}`);
+  }
+
+  function openModal() {
+    document.getElementById('myModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function (event) {
+    if (event.target === document.getElementById('myModal')) {
+      closeModal();
+    }
+  };
+</script>
+
+</body>
+</html>
