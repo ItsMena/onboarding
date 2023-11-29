@@ -1,0 +1,11 @@
+{
+    "requests": [
+        {
+            "typeOfRequest": "AD Group Access (add/remove user(s) from a group)",
+            "requestFor": "Single User",
+            "accessType": "Add User(s)",
+            "groupName": "Gitlab_Users",
+            "description": "New hire needs access to gitlab directory"
+        }
+    ]
+}
