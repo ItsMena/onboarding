@@ -4,12 +4,14 @@ import { AuthenticationComponent } from './Screens/authentication/authentication
 import { HomeComponent } from './Screens/home/home.component';
 import { AppComponent } from './app.component';
 import { RolesComponent } from './Screens/roles/roles.component';
+import { FormComponent } from './Screens/form/form.component';
 
 const routes: Routes = [
   {path: '', component: AuthenticationComponent},
   {path: 'app', component: AppComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'roles', component: RolesComponent}
+  {path: 'roles', component: RolesComponent},
+  {path: 'form', component: FormComponent}
 ];
 
 @NgModule({

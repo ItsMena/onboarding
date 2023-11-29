@@ -1,1 +1,247 @@
-<p>form works!</p>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 50%;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Access Request Form</h2>
+    <form>
+      <label for="feadId">FEAD ID:</label>
+      <input type="text" id="feadId" name="feadId" required>
+
+      <label for="typeOfRequest">Type of Request:</label>
+      <select id="typeOfRequest" name="typeOfRequest" required>
+        <option value="AD Group Access">AD Group Access (add/remove user(s) from a group)</option>
+        <option value="Create AD Group">Create AD Group</option>
+        <option value="Shared Directory Access">Shared Directory Access</option>
+      </select>
+
+      <label for="requestFor">Request For:</label>
+      <select id="requestFor" name="requestFor" multiple required>
+        <option value="Single User">Single User</option>
+        <option value="Multiple Users">Multiple Users</option>
+      </select>
+
+      <label for="accessType">Access Type:</label>
+      <select id="accessType" name="accessType" required>
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+      </select>
+
+      <label for="groupName">Group Name:</label>
+      <input type="text" id="groupName" name="groupName" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <button type="button" onclick="submitForm()">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    function submitForm() {
+      // Handle form submission logic here
+      alert('Form submitted successfully!');
+    }
+  </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 50%;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #animation-container {
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+
+    #animation {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Access Request Form</h2>
+    <form>
+      <label for="feadId">FEAD ID:</label>
+      <input type="text" id="feadId" name="feadId" required>
+
+      <label for="typeOfRequest">Type of Request:</label>
+      <select id="typeOfRequest" name="typeOfRequest" required>
+        <option value="AD Group Access">AD Group Access (add/remove user(s) from a group)</option>
+        <option value="Create AD Group">Create AD Group</option>
+        <option value="Shared Directory Access">Shared Directory Access</option>
+      </select>
+
+      <label for="requestFor">Request For:</label>
+      <select id="requestFor" name="requestFor" multiple required>
+        <option value="Single User">Single User</option>
+        <option value="Multiple Users">Multiple Users</option>
+      </select>
+
+      <label for="accessType">Access Type:</label>
+      <select id="accessType" name="accessType" required>
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+      </select>
+
+      <label for="groupName">Group Name:</label>
+      <input type="text" id="groupName" name="groupName" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <button type="button" (click)="submitForm()">Submit Request</button>
+
+      <!-- <div id="animation-container">
+        <img id="animation" src="../../../assets/animation.json" alt="Animation">
+      </div> -->
+    </form>
+  </div>
+
+  <script>
+    function submitForm() {
+      // Handle form submission logic here
+      alert('Form submitted successfully!');
+
+      // Show the animation container
+      document.getElementById('animation-container').style.display = 'block';
+
+      // Hide the animation after 4 seconds
+      setTimeout(() => {
+        document.getElementById('animation-container').style.display = 'none';
+      }, 4000);
+    }
+  </script>
+</body>
+
+</html>

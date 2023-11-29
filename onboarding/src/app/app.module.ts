@@ -9,6 +9,7 @@ import { HomeComponent } from './Screens/home/home.component';
 import { FormComponent } from './Screens/form/form.component';
 import { AuthenticationComponent } from './/Screens/authentication/authentication.component';
 import { RolesComponent } from './Screens/roles/roles.component';
+import { LottieComponent } from './lottie/lottie.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RolesComponent } from './Screens/roles/roles.component';
     HomeComponent,
     FormComponent,
     AuthenticationComponent,
-    RolesComponent
+    RolesComponent,
+    LottieComponent
   ],
   imports: [
     BrowserModule,

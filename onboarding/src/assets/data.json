@@ -21,11 +21,11 @@
                     "id": 12,
                     "name": "Team Optimus Prime",
                     "roles":[
-                        {"name":"Dev",
+                        {"name":"Dev Test",
                         "applications":["VS Code","Springboot"],
                         "employees":["Zach","Tyler"]
                     },
-                        {"name":"QA",
+                        {"name":"QA Engineer",
                         "applications":["GitHub","Jenkins"],
                         "employees":["Zach","Tyler"]}
                     ]

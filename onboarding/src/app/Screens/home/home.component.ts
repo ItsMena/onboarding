@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
+import { SharedDataService } from 'src/app/shared-data.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit{
     managers: any[] = [];
     constructor(
       private router: Router,
-      private dataService: DataService) {}
+      private dataService: DataService,
+      private sharedDataService: SharedDataService) {}
     
 
     ngOnInit(): void {
@@ -25,9 +27,9 @@ export class HomeComponent implements OnInit{
       });
     }
 
-  viewTeam(team:any){
-console.log(team)
-    this.router.navigate(['roles'])
+  viewTeam(team:any, i:number){
+this.router.navigate(['roles'])
+this.sharedDataService.setTeamData({ teamName: team, teamIndex: i });
   }
   logout(){
         this.router.navigate(['']);

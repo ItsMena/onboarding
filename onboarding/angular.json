@@ -24,6 +24,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/app/data"
+              
             ],
             "styles": [
               "src/styles.css"

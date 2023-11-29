@@ -149,11 +149,30 @@
 </div>
 
 <div class="teams-container">
-  <div class="team-card" onclick="viewTeam('Team 1')">Team 1</div>
+  <!-- <div class="team-card" onclick="viewTeam('Team 1')">Team 1</div>
   <div class="team-card" onclick="viewTeam('Team 2')">Team 2</div>
-  <div class="team-card" onclick="viewTeam('Team 3')">Team 3</div>
+  <div class="team-card" onclick="viewTeam('Team 3')">Team 3</div> -->
+  <div class="team-card" *ngFor="let team of managers[0]?.teams[index].roles" (click)="viewForm(team)">{{ team.name }}</div>
   <button class="add-role-button" onclick="openModal()">Add New Role</button>
 </div>
+
+<!-- your-component.component.html -->
+<!-- <div class="teams-container">
+    <div *ngFor="let team of managers[0]?.teams" class="team-card" (click)="viewTeam(team)">{{ team.name }}</div>
+    <button class="add-role-button" onclick="openModal()">Add New Role</button>
+   <div *ngIf="specifiedTeam">
+    <p>Roles for {{ specifiedTeam.name }}:</p>
+    <ul>
+      <li *ngFor="let role of specifiedTeam.roles">
+        <p>{{ role.name }}</p>
+        <p>Applications: {{ role.applications.join(', ') }}</p>
+        <p>Employees: {{ role.employees.join(', ') }}</p>
+      </li>
+    </ul>
+  </div>
+
+  </div> -->
+  
 
 <div id="myModal" class="modal">
   <div class="modal-content">

@@ -144,7 +144,7 @@
   <!-- <div class="team-card" (click)="viewTeam()">Team Big Bucks</div>
   <div class="team-card" (click)="viewTeam()">Team Fiserv</div>
   <div class="team-card" (click)="viewTeam()">Team Optimus Prime</div> -->
-  <div class="team-card" *ngFor="let team of managers[0]?.teams" (click)="viewTeam(team)">{{ team.name }}</div>
+  <div class="team-card" *ngFor="let team of managers[0]?.teams, let i = index" (click)="viewTeam(team,i)">{{ team.name }}</div>
   <button class="add-role-button" onclick="openModal()">Add New Team</button>
 </div>
 
