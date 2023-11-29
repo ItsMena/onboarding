@@ -1,0 +1,68 @@
+{
+    "managers": [
+        {
+            "id": 1,
+            "name": "Giannis",
+            "teams": [
+                {
+                    "id": 11,
+                    "name": "Team Bucks",
+                    "roles":[
+                        {"name":"Dev",
+                        "applications":["VS Code","Springboot"],
+                        "employees":["Zach","Tyler"]
+                    },
+                        {"name":"QA",
+                        "applications":["GitHub","Jenkins"],
+                        "employees":["Zach","Tyler"]}
+                    ]
+                },
+                {
+                    "id": 12,
+                    "name": "Team Optimus Prime",
+                    "roles":[
+                        {"name":"Dev",
+                        "applications":["VS Code","Springboot"],
+                        "employees":["Zach","Tyler"]
+                    },
+                        {"name":"QA",
+                        "applications":["GitHub","Jenkins"],
+                        "employees":["Zach","Tyler"]}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Jane",
+            "teams": [
+                {
+                    "id": 13,
+                    "name": "Team Compute",
+                    "roles":[
+                        {"name":"Dev",
+                        "applications":["VS Code","Springboot"],
+                        "employees":["Tim","Tyler"]
+                    },
+                        {"name":"QA",
+                        "applications":["GitHub","Jenkins"],
+                        "employees":["Andy","Tyler"]}
+                    ]
+                },
+                {
+                    "id": 14,
+                    "name": "Team Hard Drive",
+                    "roles":[
+                        {"name":"Dev",
+                        "applications":["VS Code","Springboot"],
+                        "employees":["Thomas","Tyler"]
+                    },
+                        {"name":"QA",
+                        "applications":["GitHub","Jenkins"],
+                        "employees":["Peter","Tyler"]}
+                    ]
+                }
+            ]
+        }
+    ]
+}
